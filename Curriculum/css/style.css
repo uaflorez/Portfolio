@@ -1,0 +1,276 @@
+/* Variables de css o custom properties*/
+:root {
+    --blanco: #fff;
+    --oscuro: #212121;
+    --primario: #1d1a1ab7;
+    --secundario: #000;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+
+}
+/* Globales */
+html {
+	font-size: 62.5%;
+  box-sizing: border-box;/** Hack para Box Model */
+}
+/* Complemento del hack para Box Model  */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+  font-size: 16px;/** 1rem = 10px*/
+  font-family: 'Raleway', sans-serif;
+  background: var(--oscuro);
+}
+.sombra {
+	-webkit-box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
+	-moz-box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
+	box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
+	background-color: var(--gris);
+	padding: 2rem;
+	border-radius: 1rem;
+
+}
+
+/* tipografia  */
+h1 {
+    text-align: center;
+    font-size: 5.8rem;
+		font-weight: 700;
+}
+h2 {
+    font-size: 4.5rem;
+}
+h3 {
+    font-size: 3rem;
+    margin: 0;
+}
+h1,h2,h3,h4 {
+    text-align: center;
+}
+.titulo {
+    text-align: center;
+}
+/* Utilidades */
+a {
+    text-decoration: none;
+}
+
+
+/* Nav menú */
+
+.navegacion-principal { 
+    background-color: var(--secundario);
+    text-align: right;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+    
+}
+
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    
+    }
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 2rem;
+}
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--gris);
+}
+/* datos */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.datos {
+	background-image: url(../img/technology-g0d951b353_1920.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+	position: relative;
+    padding-top: 4rem;
+	margin-bottom: 2rem;
+}
+.contenido_datos img {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 50%;
+}
+.contenido_datos {
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);/** sintaxis anterior */
+    background-color: rgb(0 0 0 / 70% );/** sintaxis nueva no todos los navegadores la soportan */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido_datos h1,
+.contenido_datos p {
+    color: var(--blanco );
+		margin: 0;
+		padding: 1rem;
+}
+.contenido_datos p {
+	font-size: 3.5rem;
+}
+.contenedor_perfil {
+    background-color: #3a3939;
+    font-size: 2rem;
+    text-align: justify;
+    margin-bottom: 3rem;
+    color: var(--blanco)
+}
+.contenedor_perfil h2 {
+    font-size: 5rem;
+    color: var(--secundario);
+}
+#sobre_mi {
+    padding-top: 4rem;
+}
+/* estudios  */
+#estudios {
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .estudios {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
+        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
+        column-gap: 5rem;
+    }    
+}
+.estudio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estudio h3 {
+    color: var(--secundario);
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+}
+
+.estudio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.estudio img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+/* trabajos  */
+#experiencia {
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .trabajos {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
+        grid-template-columns: repeat(2, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
+        column-gap: 5rem;
+    }    
+}
+.trabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trabajo h3 {
+    color: var(--secundario);
+    font-weight: 700;
+}
+.trabajo h4 {
+    color: var(--secundario);
+    font-weight: 700;
+    font-size: 2rem;
+}
+.trabajo p {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+}
+/* Habilidades  */
+#habilidades {
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .habilidades {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
+        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
+        column-gap: 5rem;
+    }    
+}
+
+.habilidad {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+habiliadad img {
+    align-items: center;
+}
+/* contacto */
+
+#contacto {
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .contactar {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
+        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
+        column-gap: 5rem;
+    }    
+}
+.contactar h3 {
+    color: var(--blanco);
+}
+.contactar-dato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+    text-align: center;
+}
+.contactar-dato a {
+    color: var(--blanco)
+}
+.redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+}
+footer p {
+    color:var(--blanco);
+    text-align: center;
+
+}
+
