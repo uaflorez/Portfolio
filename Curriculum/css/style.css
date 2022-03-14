@@ -35,11 +35,11 @@ body {
 /* tipografia  */
 h1 {
     text-align: center;
-    font-size: 5.8rem;
+    font-size: 6rem;
 		font-weight: 700;
 }
 h2 {
-    font-size: 4.5rem;
+    font-size: 4.8rem;
 }
 h3 {
     font-size: 3rem;
@@ -55,10 +55,12 @@ h1,h2,h3,h4 {
 a {
     text-decoration: none;
 }
+img {
+    max-width: 100%;
+}
 
 
 /* Nav menú */
-
 .navegacion-principal { 
     background-color: var(--secundario);
     text-align: right;
@@ -69,7 +71,6 @@ a {
     padding: 1rem 1.5rem;
     
 }
-
 @media (min-width: 768px){
     .navegacion-principal{
         flex-direction: row;
@@ -77,7 +78,6 @@ a {
     
     }
 }
-
 .navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
@@ -89,6 +89,7 @@ a {
     background-color: var(--primario);
     color: var(--gris);
 }
+
 /* datos */
 .contenedor {
     max-width: 120rem;
@@ -137,12 +138,12 @@ a {
     color: var(--blanco)
 }
 .contenedor_perfil h2 {
-    font-size: 5rem;
     color: var(--secundario);
 }
 #sobre_mi {
     padding-top: 4rem;
 }
+
 /* estudios  */
 #estudios {
     padding-top: 4rem;
@@ -160,20 +161,15 @@ a {
     flex-direction: column;
     align-items: center;
 }
-
 .estudio h3 {
     color: var(--secundario);
     padding: 1rem;
     font-weight: 700;
-    font-size: 2.5rem;
-
 }
-
 .estudio p {
     line-height: 2;
-    text-align: center;
+    text-align: justify;
 }
-
 .estudio img {
     height: 15rem;
     width: 15rem;
@@ -181,8 +177,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
+
 /* trabajos  */
 #experiencia {
     padding-top: 4rem;
@@ -209,11 +205,14 @@ a {
     color: var(--secundario);
     font-weight: 700;
     font-size: 2rem;
+    margin: .5rem;
 }
 .trabajo p {
-    font-size: 1.5rem;
-    line-height: 2;
-    text-align: center;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+    
 }
 /* Habilidades  */
 #habilidades {
@@ -224,18 +223,17 @@ a {
         display: grid;
         /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
         grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
-        column-gap: 5rem;
+        column-gap: 10rem;
     }    
 }
 
 .habilidad {
+    height: 10rem;
     display: flex;
     justify-content: center;
     /* align-items: center; */
 }
-habiliadad img {
-    align-items: center;
-}
+
 /* contacto */
 
 #contacto {
@@ -249,7 +247,7 @@ habiliadad img {
         column-gap: 5rem;
     }    
 }
-.contactar h3 {
+.contactar h2 {
     color: var(--blanco);
 }
 .contactar-dato {
@@ -262,15 +260,20 @@ habiliadad img {
 .contactar-dato a {
     color: var(--blanco)
 }
-.redes {
-    display: flex;
-    justify-content: center;
+/* redes */
+
+.redes h3 {
+    color: var(--blanco);
+}
+.red {
+    padding: 1.5rem;
     align-items: center;
-    margin: 3rem 0;
+    color: var(--blanco);
+    text-align: center;
+    
 }
 footer p {
     color:var(--blanco);
     text-align: center;
-
 }
 
