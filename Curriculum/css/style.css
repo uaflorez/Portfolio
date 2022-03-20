@@ -1,279 +1,349 @@
-/* Variables de css o custom properties*/
 :root {
-    --blanco: #fff;
-    --oscuro: #212121;
-    --primario: #1d1a1ab7;
-    --secundario: #000;
-    --gris: #757575;
-    --grisClaro: #DFE9F3;
+  --fuenteHeading: "PT Sans", sans-serif;
+  --fuenteParrafos: "Open Sans", sans-serif;
 
+  --primario: #784d3c;
+	--gris: #948d8d;
+  --blanco: #fff;
+  --negro: #000;
+  --grisOscuro: #424242;
 }
-/* Globales */
+
 html {
-	font-size: 62.5%;
-  box-sizing: border-box;/** Hack para Box Model */
+  box-sizing: border-box;
+  /** Hack para Box Model */
+  font-size: 62.5%; /** 1rem = 10px */
 }
+
 /* Complemento del hack para Box Model  */
-*, *:before, *:after {
-    box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
 }
+
 body {
-  font-size: 16px;/** 1rem = 10px*/
-  font-family: 'Raleway', sans-serif;
-  background: var(--oscuro);
-}
-.sombra {
-	-webkit-box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
-	-moz-box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
-	box-shadow: 1px 5px 15px 0px rgba(153,153,153,0.54);
-	background-color: var(--gris);
-	padding: 2rem;
-	border-radius: 1rem;
-
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
 }
 
-/* tipografia  */
+/* Globales */
+.contenedor {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 3rem;
+  font-family: var(--fuenteHeading);
+	line-height: 1.2;
+  text-align: center;
+}
 h1 {
-    text-align: center;
-    font-size: 6rem;
-		font-weight: 700;
+  font-size: 5.8rem;
 }
 h2 {
-    font-size: 4.8rem;
+  font-size: 4rem;
 }
 h3 {
-    font-size: 3rem;
-    margin: 0;
+  font-size: 3.2rem;
 }
-h1,h2,h3,h4 {
-    text-align: center;
-}
-.titulo {
-    text-align: center;
-}
-/* Utilidades */
-a {
-    text-decoration: none;
+h4 {
+  font-size: 2.8rem;
 }
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+/** Utilidades **/
+.no-margin {
+  margin: 0;
+}
+.no-padding {
+  padding: 0;
+}
+.centrar-texto {
+  text-align: center;
 }
 
 
-/* Nav menú */
-.navegacion-principal { 
-    background-color: var(--secundario);
-    text-align: right;
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-    height: 4rem;
-    padding: 1rem 1.5rem;
-    
+/*  sección hero */
+.hero {
+  background-image: url('../img/technology-g0d951b353_1920.jpg');
+  background-position: center center;
+  width: 100%;
+  height:80vh;
+  position: absolute;
+  top: 0;
 }
-@media (min-width: 768px){
-    .navegacion-principal{
-        flex-direction: row;
-        justify-content: space-between;
-    
-    }
+
+.hero .hero-texto {
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 10rem;
 }
-.navegacion-principal a {
-    color: var(--blanco);
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 0 2rem;
+.hero-texto img {
+  width: 20rem;
+  border-radius: 30% 10%;
 }
-.navegacion-principal a:hover {
-    background-color: var(--primario);
+/* Header  */
+
+header {
+  background-color: #fff;
+  box-shadow: 1.5px 1.5px 4px #b3b3b3;
+  height: 8rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 0 1em;
+  transition: 600ms all ease-in-out;
+  font-size: 3rem;
+  
+}
+header.transparente {
+    background-color: transparent;
+    box-shadow: none;
+}
+header nav a {
+    color: #67666e;
+    font-weight: normal;
+    margin: 0 1rem;
+    transition: 300ms ease-in-out all;
+}
+header.transparente nav a {
+    color: rgba(255, 255, 255, 0.7);
+}
+header nav a.activo,
+header nav a:hover {
     color: var(--gris);
+    font-weight: bold;
+}
+header.transparente nav a.activo,
+header.transparente nav a:hover {
+    color: var(--blanco);
 }
 
-/* datos */
-.contenedor {
-    max-width: 120rem;
-    margin: 0 auto;
-}
-.datos {
-	background-image: url(../img/technology-g0d951b353_1920.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 450px;
-	position: relative;
-    padding-top: 4rem;
-	margin-bottom: 2rem;
-}
-.contenido_datos img {
-	width: 20rem;
-	height: 20rem;
-	border-radius: 50%;
-}
-.contenido_datos {
-    position: absolute;
-    background-color: rgba(0, 0, 0, .7);/** sintaxis anterior */
-    background-color: rgb(0 0 0 / 70% );/** sintaxis nueva no todos los navegadores la soportan */
-    width: 100%;
-    height: 100%;
+/* Botón burger */
 
+#burger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  display: none;
+}
+#burger .barra {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.6rem;
+  background-color: var(--negro);
+  transition: 400ms all ease-in-out;
+}
+#burger.abierto .barra {
+  background-color: var(--gris);
+}
+#burger.abierto .barra.superior{
+  transform: translateY(8px) rotateZ(45deg);
+}
+#burger.abierto .barra.media {
+  width: 0;
+}
+#burger.abierto .barra.inferior {
+  transform: translateY(-8px) rotateZ(-45deg);
+}
+@media (max-width: 768px ) {
+  #burger {
+    display: block;
+  }
+  header {
+    justify-content: flex-end;
+  }
+  header nav {
+    display: none;
+  }
+}
+/* Menú lateral */
+.menu {
+  width: 36rem;
+  height: 100vh;
+  background-color: var(--grisOscuro);
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: -36rem;
+  padding-top: 4rem;
+  transition: all 700ms ease-in-out;
+}
+/* se implementa con jquery */
+.menu.abierto {
+  left: 0;
+}
+.menu nav {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.menu nav a {
+  padding: 0.6rem 0;
+  color: var(--blanco);
+  font-size: 3rem;
+}
+.menu nav a:hover {
+  color: var(--negro);
+}
+.menu .copyright {
+  color: var(--blanco);
+  font-size: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+}
+/* layout */
+.primera {
+  margin-top: 90vh;
+}
+#pr {
+  display: block;
+  margin-top: -90px;
+  margin-bottom: 90px;
+}
+.fila {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem;
+}
+.sombrita {
+  box-shadow: 0px 0px 104px 0px rgba(0,0,0,0.53);
+  -webkit-box-shadow: 0px 0px 104px 0px rgba(0,0,0,0.53);
+  -moz-box-shadow: 0px 0px 104px 0px rgba(0,0,0,0.53);
+  margin: 4rem 2rem;
+  border-radius: 1rem;
+  background-color: #ECF0F1;
+}
+.sombrita h2 {
+  padding: 3rem 1rem;
+}
+
+.fila.grid {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px);
+  grid-gap: 2rem;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  
+  .card {
+    width: 36rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem gray;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    overflow: hidden;
 }
-.contenido_datos h1,
-.contenido_datos p {
-    color: var(--blanco );
-		margin: 0;
-		padding: 1rem;
 }
-.contenido_datos p {
-	font-size: 3.5rem;
+.card img {
+  height: 30rem;
 }
-.contenedor_perfil {
-    background-color: #3a3939;
-    font-size: 2rem;
-    text-align: justify;
-    margin-bottom: 3rem;
-    color: var(--blanco)
+.card .footer_card {
+  padding: 0.8rem;
+  width: 100%;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-.contenedor_perfil h2 {
-    color: var(--secundario);
+.card .footer_card p {
+  margin-bottom: 0.5rem;
 }
-#sobre_mi {
-    padding-top: 4rem;
+.card .footer_card p:first-child {
+  font-weight: 700;
 }
-
-/* estudios  */
-#estudios {
-    padding-top: 4rem;
-}
+/* seccion trabajos */
 @media (min-width: 768px) {
-    .estudios {
-        display: grid;
-        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
-        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
-        column-gap: 5rem;
-    }    
-}
-.estudio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.estudio h3 {
-    color: var(--secundario);
-    padding: 1rem;
-    font-weight: 700;
-}
-.estudio p {
-    line-height: 2;
-    text-align: justify;
-}
-.estudio img {
-    height: 15rem;
-    width: 15rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-/* trabajos  */
-#experiencia {
-    padding-top: 4rem;
-}
-@media (min-width: 768px) {
-    .trabajos {
-        display: grid;
-        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
-        grid-template-columns: repeat(2, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
-        column-gap: 5rem;
-    }    
+  .trabajos { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+  
 }
 .trabajo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-bottom: 0.5rem;
+}
+.trabajo p:first-child {
+  font-weight: bold;
 }
 
-.trabajo h3 {
-    color: var(--secundario);
-    font-weight: 700;
-}
-.trabajo h4 {
-    color: var(--secundario);
-    font-weight: 700;
-    font-size: 2rem;
-    margin: .5rem;
-}
-.trabajo p {
-    font-size: 2.2rem;
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 1.5rem;
-    
-}
-/* Habilidades  */
-#habilidades {
-    padding-top: 4rem;
-}
+/* habilidades */
 @media (min-width: 768px) {
-    .habilidades {
-        display: grid;
-        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
-        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
-        column-gap: 10rem;
-    }    
+  
+  .habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+  }
 }
+
 
 .habilidad {
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.habilidad img {
+  width: 10rem;
+}
 /* contacto */
-
-#contacto {
-    padding-top: 4rem;
+@media (min-width: 768px) {
+  
+  .contactar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+  }
+}
+.contactar-dato p:first-child {
+  font-weight: 700;
+  padding: 2rem 0;
 }
 @media (min-width: 768px) {
-    .contactar {
-        display: grid;
-        /*grid-template-columns: 1fr 1fr 1fr; el fr es fraccion es como si pusieramos 33.3% */
-        grid-template-columns: repeat(3, 1fr);/*En resumido se pone asi y da lo mismo que el anterior*/
-        column-gap: 5rem;
-    }    
+  .red {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.contactar h2 {
-    color: var(--blanco);
-}
-.contactar-dato {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--blanco);
-    text-align: center;
-}
-.contactar-dato a {
-    color: var(--blanco)
-}
-/* redes */
 
-.redes h3 {
-    color: var(--blanco);
+footer {
+ height: 5rem;
+ align-items: center;
 }
-.red {
-    padding: 1.5rem;
-    align-items: center;
-    color: var(--blanco);
-    text-align: center;
-    
-}
-footer p {
-    color:var(--blanco);
-    text-align: center;
+.copyright {
+  margin: 2rem 0;
+  height: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
