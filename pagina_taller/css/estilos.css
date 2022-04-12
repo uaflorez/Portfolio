@@ -1,0 +1,375 @@
+:root{
+	--principalText: 'Lato', sans-serif;
+	--blanco: #ffff;
+	--gris: #989494;
+	--negro: #000;
+	scroll-behavior: smooth;
+}
+
+/* Globales */
+html{
+	font-size: 62.5%;
+  box-sizing: border-box;/** Hack para Box Model */
+
+}
+
+/* Complemento del hack para Box Model  */
+*, *:before, *:after {
+		margin: 0;
+		padding: 0;
+    box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: var(--principalText);
+	font-size: 2rem;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 120rem;
+	overflow: hidden; /* para que se oculte lo que se desborda */
+	margin: auto;
+	padding: 6rem 0;
+}
+
+/* ---------------------------------------  Header  ------------------------------------------------ */
+
+header {
+	height: 100vh;
+	background-image: linear-gradient(to top, rgba(150, 251, 195, 0.4) 0%, rgba(249, 245, 134, 0.4) 100%), url(../img/ocho.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+.head {
+	text-align: center;
+	padding: 0;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; /* con esto los pasa de estar en linea a estar uno debajo del otro*/
+	color: var(--negro);
+}
+
+.hamburguesa {
+	position: fixed;
+	top: 3rem;
+	right: 3rem;
+	/* z-index: 3; */
+	background-color: var(--blanco);
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer; /* paraque aparezca la manito cada ves que pasamos el mouse por encima*/
+	border-radius: 1rem;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacion {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 30vw;
+	height: 100%;
+	background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	display: flex;
+	flex-direction: column;/*para que se pongan unos debajo de los otros*/
+	justify-content: space-evenly;
+	align-items: center;
+	transition: transform .3s ease-in-out;
+	transform: translate(110%);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.spread{
+	transform: translate(0);
+}
+
+.menu-navegacion a {
+	color:var(--blanco);
+	text-decoration: none;
+}
+
+.titulo {
+	font-size: 6rem;
+	/* font-weight: 700; */
+	margin-bottom: 1.5rem;
+}
+
+.copy {
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+
+/* ----------------------------------------------- Servicios  --------------------------------------------------------- */
+
+.subtitulo {
+	text-align: center;
+	font-weight: 300;
+	color: var(--gris);
+	margin-bottom: 4rem;
+	font-size: 4rem;
+}
+
+.contenedor-servicio{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.contenedor-servicio img {
+	width: 50%;
+}
+
+.checklist-servicio {
+	width: 45%;
+}
+.service {
+	margin-bottom: 2rem;
+	text-align: justify;
+}
+
+.n-service {
+	margin-bottom: 0.7rem;
+	color: var(--gris);
+}
+.number {
+	display: inline-block;
+	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	width: 3rem;
+	height: 3rem;
+	color: var(--blanco);
+	text-align: center;
+	border-radius: 50%;
+	font-weight: 700;
+	line-height: 3rem;
+	margin-right: 1rem;
+}
+/* ------------------------------------------ portafolio --------------------------------------------- */
+.gallery {
+	background: #f2f2f2;
+}
+.contenedor-galeria {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.galeria {
+	object-fit: cover;
+	width: 37rem;
+	display: block;
+	margin: .5rem .2rem;	
+	box-shadow: 0 0 6 rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	position: center;
+	
+}
+
+.imagen-light{
+	position: fixed;
+	background: rgba(0, 0, 0, 0.8);
+	width:100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: translate(100%);
+	transition: transform .2s ease-in-out;
+}
+.show {
+	transform: translate(0);
+}
+.agregar-imagen {
+	object-fit: cover;
+	width: 60%;
+	border-radius: 1rem;
+	transform: scale(0);
+	transition: transform .3s .2s;
+}
+.showImage {
+	transform:scale(1);
+}
+.close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	width: 4rem;
+	cursor: pointer;
+}
+
+/* --------------------------------------------------  expertos  ----------------------------------------------- */
+.experts {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.cont-expert {
+	width: 30%;
+	text-align: center;
+	margin-bottom: 2rem; 
+}
+
+.cont-expert img{
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+.n-expert {
+	display:  inline-block;
+	margin-top: 2rem;
+	width: 100%;
+	font-weight: 400;
+}
+
+/* -------------------------------------------  footer  ------------------------------------------------------ */
+
+footer {
+	background-color: var(--gris);
+	padding-bottom: 0.1px;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 6rem;
+	padding-bottom: 4rem;
+}
+
+.contact-us {
+	width: 40%;
+	color:var(--blanco);
+}
+
+.brand {
+	font-weight: 700;
+	font-size: 4rem;
+}
+.brand + p {
+	font-weight: 700;
+}
+
+.social-media {
+	width: 50%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.social-media-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 2rem;
+	width: 6rem;
+	height: 6rem;
+	border: 1px solid var(--blanco);
+	border-radius: 50%;
+}
+
+.social-media-icon:hover {
+	background: var(--blanco);
+	color:var(--negro)
+}
+
+.social-media-icon img {
+	width: 4.5rem;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.line {
+	width: 90%;
+	max-width: 120rem;
+	margin: 0 auto;
+	height: .3rem;
+	background: var(--blanco);
+	margin-bottom: 6rem;
+}
+
+@media screen and (max-width: 800px) {
+	.menu-navegacion {
+		width: 50vw; 
+	}
+	.titulo {
+		font-size: 4rem;
+	}
+	.contenedor-servicio img {
+		width: 80%;
+		margin-bottom: 4rem;
+	}
+	.checklist-servicio {
+		width: 80%;
+	}
+	.service {
+		margin-bottom: 3rem;
+	}
+	.agregar-imagen{
+		width: 80%;
+	}
+	.galeria {
+		width: 45%;
+	}
+	.cont-expert {
+		width: 80%;
+	}
+	.footer-content {
+		justify-content: center;
+	}
+	.social-media {
+		width: 80%;
+		justify-content: space-evenly;
+
+	}
+	.social-media-icon {
+		margin-left: 0;
+	}
+	.social-media img {
+		margin-left: 0;
+	}
+	.contact-us {
+		text-align: center;
+		width: 80%;
+		margin-bottom: 4rem;
+	}
+}
+@media screen and (max-width: 500px){
+	.menu-navegacion {
+		width: 65vw;
+	}
+	.hamburguesa {
+		top: 2rem;
+		right: 2rem;
+	}
+	.titulo {
+		font-size: 3rem;
+	}
+	.copy {
+		font-size: 2rem;
+	}
+	.subtitulo {
+		font-size: 3rem;
+	}
+	.agregar-imagen {
+		width: 95%;
+	}
+	.galeria {
+		width: 95%;
+	}
+	.social-media {
+		width: 100%;
+	}
+	.contact-us {
+		width: 90%;
+	}
+}
