@@ -1,6 +1,6 @@
 header {
 	height: 100vh;
-	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%), url(./img/programing.webp);
+	background-image: linear-gradient(135deg, rgb(245, 247, 250, 0.4) 0%, rgb(196, 208, 227, 0.4) 100%), url(/build/img/Codeprog.webp);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -14,5 +14,18 @@ header {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	color: $blanco;
+	color: $negro;
+}
+.hamburguesa {
+	position: fixed;
+	top: 3rem;
+	right: 3rem;
+	/* z-index: 3; */
+	background-color: var(--blanco);
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer;
+	/* paraque aparezca la manito cada ves que pasamos el mouse por encima*/
+	border-radius: 1rem;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }

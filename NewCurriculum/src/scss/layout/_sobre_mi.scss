@@ -1,0 +1,25 @@
+.subtitulos{
+	text-align: center;
+	font-weight: $delgada;
+	color: $gris;
+	font-size: 4rem;
+	margin-bottom: 4rem;
+}
+.contenedor-sobremi {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+
+	picture {
+		width: 50%;
+	}
+	.perfil{
+		width: 40%;
+		.sobremi {
+			
+			margin-bottom: 2rem;
+			text-align: justify;
+		}
+	}
+}
