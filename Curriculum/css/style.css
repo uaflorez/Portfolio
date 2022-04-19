@@ -10,9 +10,9 @@
 }
 
 html {
-  box-sizing: border-box;
   /** Hack para Box Model */
   font-size: 62.5%; /** 1rem = 10px */
+  box-sizing: border-box;
 }
 
 /* Complemento del hack para Box Model  */
@@ -20,8 +20,12 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
   margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+a {
+  text-decoration: none;
 }
 
 body {
@@ -31,13 +35,13 @@ body {
 
 /* Globales */
 .contenedor {
-  width: min(90%, 120rem);
-  margin: 0 auto;
+  width: 90%;
+  max-width: 120rem;
+  overflow: hidden;
+  margin: auto;
+  padding: 6rem 0;
 }
 
-a {
-  text-decoration: none;
-}
 h1,
 h2,
 h3,
