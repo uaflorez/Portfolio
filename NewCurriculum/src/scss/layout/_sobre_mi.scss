@@ -10,16 +10,19 @@
 	justify-content: space-evenly;
 	align-items: center;
 	flex-wrap: wrap;
+	
 
 	picture {
 		width: 50%;
 	}
-	.perfil{
-		width: 40%;
-		.sobremi {
-			
-			margin-bottom: 2rem;
-			text-align: justify;
+	.sobremi {
+		width: 45%;
+		margin-bottom: 2rem;
+		text-align: justify;
+		
+		img {
+			width: 2.4rem;
 		}
 	}
+
 }
