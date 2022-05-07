@@ -1,217 +1,286 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CV Uriel Florez</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<header>
-		<div class="">
-			<nav class="navegacion-principal">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>CV Uriel Florez</title>
+		<link rel="preload" href="css/normalize.css" as="style"/>
+		<link rel="stylesheet" href="css/normalize.css"/>
+
+		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"/>
+
+		<link rel="preload" href="css/style.css" as="style"/>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+	</head>
+	<body>
+		<header class="transparente">
+			<nav>
 				<a href="#sobre_mi">Sobre Mi</a>
 				<a href="#estudios">Estudios</a>
 				<a href="#experiencia">Experiencia</a>
 				<a href="#habilidades">Habilidades</a>
 				<a href="#contacto">Contacto</a>
 			</nav>
-		</div>
-	</header>
-	<!-- Seccion de la imagen con el nombre y profeción -->
-	<section id="sobre_mi" class="datos">
-		<div class="contenido_datos">
-			<img src="img/FotoPerfil1.png" alt="foto de perfil de uriel florez">
-			<h1>Uriel Alonso Florez Vargas</h1>
-			<p>Ingeniero de Software</p>
-		</div>
-	</section> <!-- fin datos -->
-	<!-- Información principal sobre mi -->
-	<div class="contenedor_perfil sombra">
-		<h2>Sobre mi</h2>
-		<p>
-			Ingeniero de software de la universidad Politécnico Grancolombiano. Soy una persona proactiva, me gusta afrontar nuevos retos que me ayuden en el crecimiento profesional y personal, aportando lo mejor de mí para el desarrollo de los proyectos de la compañía.
-		</p>
-		<p>
-			He adquirido conocimientos en testing manual, HTML, CSS, JavaScript, manejo de pruebas de software, manejo de selenium con Python de forma básica, y estoy cursando Desarrollo web con PHP en el SENA de modo virtual, entre otras habilidades, que por medio de cursos virtuales he adquirido.
-		</p>
-		<p>
-			Puedes descargar mi curriculum 
-			<a href="download/Uriel Curriculum.pdf" download="Uriel Curriculum.pdf">
-				<img src="img/file_download_black_24dp.svg" alt="descarga de curriculum">
-			</a>
-		</p>
-		<br><br>
-	</div> <!-- contenedor sobre mi -->
-	<main class="contenedor sombra">
-		<!-- seccion de estudios  -->
-		<section id="estudios" class="contenedor">
-			<h2>Estudios</h2>
-			<div class="estudios">
-
-				<div class="estudio">
-					<h3>Ingeniero de Software</h3>
-					<img src="img/Diploma_Ing_Software.jpeg" alt="Diploma de grado">
-					<p>
-						Politécnico Grancolombiano <br>
-						2015-2020
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Diseñando Páginas web con Bootstrap 4</h3>
-					<img src="img/Diseño_paginas_web_bootstrap.png" alt="certificado de diseño de paginas web con bootstrap">
-					<p>
-						Universidad Austral (Ofrecido por Coursera) <br>
-						20 Horas - 2020
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Manejo de Pruebas de Software</h3>
-					<img src="img/Manejo_pruebas_software.png" alt="certificado manejo de pruebas">
-					<p>
-						Servicio Nacional de Aprendizaje SENA <br>
-						40 Horas - 2021
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Curso de Fundamentos De Ingeniería de Software</h3>
-					<img src="img/Fundamentos_ingenieria_software.png" alt="certificado fundamentos de ingenieria de software">
-					<p>
-						Platzi & APPS.co (Impulsando el emprendimiento digital en colombia) <br>
-						15 Horas - 2021
-					</p>
-				</div>
-				<div class="estudio">
-					<h3>QA Automation Testing con Python y Selenium WebDriver</h3>
-					<img src="img/QA_selenium_python.png" alt="certificado qa testing con selenium en python">
-					<p>
-						Udemy <br>
-						8 Horas - 2021
-					</p>
-
-				</div>
-
-				
-
-				<div class="estudio">
-					<h3>Metodologia de la Programacion de Sistemas Informaticos</h3>
-					<img src="img/Metodologia_programacion_sistemas_inf.png" alt="certificado metodologia de programacion de software">
-					<p>
-						Servicio Nacional de Aprendizaje SENA <br>
-						40 Horas - 2021
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Introducción al Testing de Software</h3>
-					<img src="img/Introducción_testing_software.png" alt="certificado introducciona al testing de software">
-					<p>
-						Udemy <br>
-						5 Horas - 2022
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Tester</h3>
-					<img src="img/Tester.png" alt="certificado de tester">
-					<p>
-						Capacitate para el Empleo Fundacion Carlos Slim <br>
-						8 Horas - 2022
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Universidad CSS Aprende CSS desde Cero a Experto!</h3>
-					<img src="img/Universidad_css.png" alt="certificado de CSS">
-					<p>
-						Udemy <br>
-						7.5 Horas - 2022
-					</p>
-				</div>
-				<div class="estudio">
-					<h3>Universidad HTML Aprende HTML desde Cero a Experto!</h3>
-					<img src="img/Universidad_html.png" alt="certificado HTML">
-					<p>
-						Udemy <br>
-						6.5 Horas - 2022
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>Master en programación fullstack JavaScript Angular Node</h3>
-					<img src="img/fullstack_js_angular_node.png" alt="certificado fullstack">
-					<p>
-						Udemy <br>
-						28.5 Horas - 2022
-					</p>
-				</div>
-
-				<div class="estudio">
-					<h3>De Cero a Programador: Python desde Cero</h3>
-					<img src="img/fullstack_js_angular_node.png" alt="certificado fullstack">
-					<p>
-						Udemy <br>
-						4.5 Horas - 2022
-					</p>
-				</div>
+		</header>
+		<div class="hero">
+			<div class="hero-texto">
+				<img src="img/PhotoRoom-20220403_104231.png" alt="foto de perfil de uriel florez">
+				<h1 class="no-margin">Uriel Alonso Florez Vargas</h1>
+				<p id="#pr" class="no-margin">Ingeniero de Software<br>Matricula Profesional 091132-0612XXX CND</p>
 			</div>
-		</section> <!-- fin estudios -->
+		</div>
+		<!-- Menú hambuerguesa -->
+		<div id="burger">
+			<div class="barra superior"></div>
+			<div class="barra media"></div>
+			<div class="barra inferior"></div>
+		</div>
+		<div class="menu">
+			<nav>
+				<a href="#sobre_mi">Sobre Mi</a>
+				<hr>
+				<a href="#estudios">Estudios</a>
+				<hr>
+				<a href="#experiencia">Experiencia</a>
+				<hr>
+				<a href="#habilidades">Habilidades</a>
+				<hr>
+				<a href="#contacto">Contacto</a>
+			</nav>
+			<p class="copyright">&copy; Uriel Alonso Florez Vargas</p>
+		</div>
+		<!-- fin hambuerguesa -->
+
+		<!-- Información principal sobre mi -->
+		<section id="sobre_mi" class="primera">
+			<span id="pr">&nbsp;</span>
+			<div class="fila sombrita">
+				<h2>Sobre mi</h2>
+				<p>
+					Ingeniero de software de la universidad Politécnico Grancolombiano.  Apasionado por el desarrollo web front end con HTML5 CSS3 SASS JavaScript un poco de PHP, Soy una persona proactiva, me gusta afrontar nuevos retos que me ayuden en el crecimiento profesional y personal, aportando lo mejor de mí para el desarrollo de los proyectos de la compañía.
+				</p>
+				<p>
+					He adquirido conocimientos en testing manual, HTML, CSS, JavaScript, manejo de pruebas de software, manejo de selenium con Python de forma básica, y Desarrollo web con PHP basico curso echo en el SENA de modo virtual, entre otras habilidades, que por medio de cursos virtuales he adquirido.
+				</p>
+				<p>
+					Puedes descargar mi curriculum haciendo click 
+					<a href="download/Uriel Curriculum.pdf" download="Uriel Curriculum.pdf">
+						<img src="img/file_download_black_24dp.svg" alt="descarga de curriculum">
+					</a>
+				</p>
+				<br><br>
+			</div> <!-- contenedor sobre mi -->
+		</section>
+
+		<main id="estudios">
+			<!-- seccion de estudios  -->
+			<h2>Estudios</h2>
+			<section class="fila grid">
+				<div class="card">
+					<img src="img/Diploma_Ing_Software.jpeg" alt="Diploma de grado">
+					<div class="footer_card">
+						<div>
+							<p>Ingeniero de Software</p>
+							<p>Politécnico Grancolombiano <br> 2015-2020</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Diseño_paginas_web_bootstrap.png" alt="certificado de diseño de paginas web con bootstrap">
+					<div class="footer_card">
+						<div>
+							<p>Diseñando Páginas web con Bootstrap 4</p>
+							<p>Universidad Austral (Ofrecido por Coursera) <br> 20 Horas - 2020</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Fundamentos_ingenieria_software.png" alt="certificado fundamentos de ingenieria de software">
+					<div class="footer_card">
+						<div>
+							<p>Curso de Fundamentos De Ingeniería de Software</p>
+							<p>Platzi & APPS.co (Impulsando el emprendimiento digital en colombia) <br> 15 Horas - 2021</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/QA_selenium_python.png" alt="certificado qa testing con selenium en python">
+					<div class="footer_card">
+						<div>
+							<p>QA Automation Testing con Python y Selenium WebDriver</p>
+							<p>Udemy <br> 8 Horas - 2021</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Fundamentos de web scraping.png" alt="certificado fundamento de web scraping"> 
+					<div class="footer_card">
+						<div>
+							<p>Fundamentos de web Scraping con Proyectos de Cero a Experto</p>
+							<p>Udemy <br> 4.5 Horas - 2021</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Manejo_pruebas_software.png" alt="certificado manejo de pruebas"> 
+					<div class="footer_card">
+						<div>
+							<p>Manejo de Pruebas de Software</p>
+							<p>Servicio Nacional de Aprendizaje SENA <br> 40 Horas - 2021</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Metodologia_programacion_sistemas_inf.png" alt="certificado metodologia de programacion de software">
+					<div class="footer_card">
+						<p>Metodologia de la Programacion de Sistemas Informaticos</p>
+						<p>Servicio Nacional de Aprendizaje SENA <br> 40 Horas - 2021</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/CalidadDesarrolloSoftware.png" alt="certificado Calidad en el desarrollo de software">
+					<div class="footer_card">
+						<p>Calidad en el Desarrollo de Software</p>
+						<p>Servicio Nacional de Aprendizaje SENA <br> 40 Horas - 2021</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Tester.png" alt="certificado de tester">
+					<div class="footer_card">
+						<div>
+							<p>Tester</p>
+							<p>Capacitate para el Empleo Fundacion Carlos Slim <br>8 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Introducción_testing_software.png" alt="certificado introducciona al testing de software">
+					<div class="footer_card">
+						<div>
+							<p>Introducción al Testing de Software</p>
+							<p>Udemy <br> 5 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Universidad_css.png" alt="certificado de CSS">		
+					<div class="footer_card">
+						<div>
+							<p>Universidad CSS Aprende CSS desde Cero a Experto!</p>
+							<p>Udemy <br>7.5 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Universidad_html.png" alt="certificado HTML">
+					<div class="footer_card">
+						<div>
+							<p>Universidad HTML Aprende HTML desde Cero a Experto!</p>
+							<p>Udemy <br> 6.5 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/fullstack_js_angular_node.png" alt="certificado fullstack">
+					<div class="footer_card">
+						<div>
+							<p>Master en programación fullstack JavaScript Angular Node</p>
+							<p>Udemy <br> 28.5 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/de_cero_programador_python.png" alt="certificado python">
+					<div class="footer_card">
+						<div>
+							<p>De Cero a Programador: Python desde Cero</p>
+							<p>Udemy <br> 4.5 Horas - 2022</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<img src="img/Desarrollo_web_php.png" alt="certificado Desarrollo web con php">
+					<div class="footer_card">
+						<p>Desarrollo web con PHP</p>
+						<p>Servicio Nacional de Aprendizaje SENA <br> 40 Horas - 2022</p>
+					</div>
+				</div>
+			</section><!-- fin estudios -->
+		</main>
 		<!-- seccion trabajos -->
 		<section id="experiencia" class="contenedor">
-			<h2>Experiencia Laboral</h2>
+			<h2>Experiencia Laboral</h2> 
 			<div class="trabajos">
 				<div class="trabajo">
-					<h3>Desarrollador Junior</h3>
-					<h4>BRM S.A. Grandes Interacciones.</h4>
-					<p>
-						Me desempeño como tester manual para los desarrollos de la compañia, llevando los registro de las incidencias y los reportes de las mismas. Todo con los parametros establecidos por la compañia.
-					</p>
-					<p>Marzo 2021 - Actualmente</p>
+					<h3 class="no-margin">Desarrollador Junior</h3>
+					<div>
+						<p>BRM S.A. Grandes Interacciones.</p>
+						<p>
+							Me desempeño como tester manual para los proyectos de la compañía, llevando los registro de las incidencias y los reportes de las mismas. Todo con los parámetros establecidos por la compañia.
+						</p>
+						<p>Marzo 2021 - Actualmente</p>
+					</div>
 				</div>
 				
-				<div class="trabajo">
-					<h3>Conductor de Presidencia</h3>
-					<h4>BRM S.A. Grandes Interacciones.</h4>
-					<p>
-						Mis funciones eran el transporte de la presidenta y el visepresidente de la compañia y su familias, conduciendo vehículos de alta gama y blindados, era responsable de programar los mantenimientos de los vehículos, colaborar con las actividades personales de la presidencia. 
-					</p>
-					<p>Marzo 2010 - Febrero 2021</p>
-				</div>
+				<div class="trabajo no-margin">
+					<h3 class="no-margin">Conductor de Presidencia</h3>
+					<div>
+						<p>BRM S.A. Grandes Interacciones.</p>
+						<p>
+							Mis funciones eran el transporte de la presidenta y el vicepresidente de la compañía y su familias, conduciendo vehículos de alta gama y blindados, era responsable de programar los mantenimientos de los vehículos, colaborar con las actividades personales de la presidencia. 
+						</p>
+						<p>Marzo 2010 - Febrero 2021</p>
 
-				<div class="trabajo">
-					<h3>Conductor de Presidencia</h3>
-					<h4>Unicorp S.A</h4>
-					<p>
-						Mis funciones eran el transporte de la presidenta y el visepresidente de la compañia y su familias, conduciendo vehículos de alta gama y blindados, era responsable de programar los mantenimientos de los vehículos, colaborar con las actividades personales de la presidencia.
-					</p>
-					<p>Junio 2009 - Febrero 2010</p>
+					</div>
 				</div>
-
+	
 				<div class="trabajo">
-					<h3>Supervisor de vehículos en carretera</h3>
-					<h4>Transportes y servicios TRANSER S.A</h4>
-					<p>
-						Mis funciones eran el acompañamiento en motocicleta de los vehículos en el perimetro urbano haciendo el recorrido hasta su lugar de destino en la ciudad o acompañando la salida de los mismos hasta puntos estrategicos definidos por la compañia.
-					</p>
-					<p>Julio 2005 - Febrero 2009</p>
+					<h3 class="no-margin">Conductor de Presidencia</h3>
+					<div>
+						<p>Unicorp S.A</p>
+						<p>
+							Mis funciones eran el transporte de la presidenta y el vicepresidente de la compañía y su familias, conduciendo vehículos de alta gama y blindados, era responsable de programar los mantenimientos de los vehículos, colaborar con las actividades personales de la presidencia.
+						</p>
+						<p>Junio 2009 - Febrero 2010</p>
+					</div>
+				</div>
+	
+				<div class="trabajo">
+					<h3 class="no-margin">Supervisor de vehículos en carretera</h3>
+					<div>
+						<p>Transportes y servicios TRANSER S.A</p>
+						<p>
+							Mis funciones eran el acompañamiento en motocicleta de los vehículos en el perímetro urbano haciendo el recorrido hasta su lugar de destino en la ciudad o acompañando la salida de los mismos hasta puntos estratégicos definidos por la compañía.
+						</p>
+						<p>Julio 2005 - Febrero 2009</p>
+					</div>
 				</div>
 			</div>
 		</section> <!-- fin trabajos -->
 		<!-- Seccion Habilidades -->
-		<section id="habilidades" class="contenedor">
+		<section id="habilidades" class="sombrita">
 			<h2>Habilidades</h2>
 			<div class="habilidades">
 				<div class="habilidad">
+					<img src="img/icons8-html-5.svg" alt="icono de  HTML 5"> <br>
 					<p>
-						<img src="img/icons8-html-5.svg" alt="icono de  HTML 5">
 						<progress max="100" value="70"></progress>
 					</p>
 				</div>
@@ -228,70 +297,81 @@
 					</p>
 				</div>
 				<div class="habilidad">
+					<img src="img/icons8-oreja.svg" alt="icono de Bootstrap">
 					<p>
-						<img src="img/icons8-oreja.svg" alt="icono de Bootstrap">
 						<progress max="100" value="70"></progress>
 					</p>
 				</div>
 				<div class="habilidad">
+					<img src="img/file_type_php_icon_130266.png" alt="icono de PHP">
 					<p>
-						<img src="img/file_type_php_icon_130266.png" alt="icono de PHP">
 						<progress max="100" value="30"></progress>
 					</p>
 				</div>
 				<div class="habilidad">
+					<img src="img/icons8-angularjs.svg" alt="icono de angular">
 					<p>
-						<img src="img/icons8-angularjs.svg" alt="icono de angular">
 						<progress max="100" value="30"></progress>
 					</p>					
 				</div>
-			</div>
+			</di v>
 		</section> <!-- fin habilidades -->
-	</main>
-	<footer>
+		
 		<!-- Seccion contacto -->
 		<section id="contacto" class="contenedor">
-			<h2>Contacto</h2>
+			<h2>Contacto</h2>	
 			<div class="contactar">
 				<div class="contactar-dato">
-					<h3>Email</h3>
+					<p>Email</p>
 					<a href="mailto:urielflorez29@gmail.com">urielflorez29@gmail.com</a>
 				</div>
+				
 				<div class="contactar-dato">
-					<h3>Dirección</h3>
-					<p>
+					<p>Teléfono</p>
+					<p><a href="tel:3168320536">3168320536</a></p>
+				</div>
+				<div class="contactar-dato">
+					<p>Dirección</p>
+					<p><a href="https://maps.app.goo.gl/Mr9UbbwFoUoyBznE9" target="_blank">
+						
 						Calle 65 Sur # 93D - 46 casa 42 <br>
 						Bogotá <br>
 						Colombia.
-					</p>
+					</a>
+				
+				</p>
 				</div>
 				<div class="contactar-dato">
-					<h3>Teléfono</h3>
-					<p>3168320536</p>
-				</div>
-				<div class="redes">
-					<h3>Redes Sociales</h3>
-					<a href="https://www.facebook.com/uflorez" target="_blank">
-						<img src="img/icons8-facebook-nuevo.svg" alt="logo de facebook">
-					</a>
-					<a href="https://www.linkedin.com/in/urielflorez248196123" target="_blank">
-						<img src="img/icons8-linkedin.svg" alt="logo de linkedin">
-					</a>
-					<a href="https://twitter.com/uflorez29" target="_blank">
-						<img src="img/icons8-twitter-circled.svg" alt="logo de twtter">
-					</a>
-					<a href="https://www.instagram.com/SumeSolucionesTec/" target="_blank">
-						<img src="img/icons8-instagram.svg" alt="logo de instagram">
-					</a>
-					<a href="https://api.whatsapp.com/send?phone=+573168320536">
-					<img src="img/icons8-whatsapp.svg" alt="icono de whatsapp">
-					</a>
+					<p>Redes Sociales</p>
+					<div class="red">
+						<a href="https://www.facebook.com/uflorez" target="_blank">
+							<img src="img/icons8-facebook-nuevo.svg" alt="logo de facebook">
+						</a>
+						<a href="https://www.linkedin.com/in/urielflorez248196123" target="_blank">
+							<img src="img/icons8-linkedin.svg" alt="logo de linkedin">
+						</a>
+						<a href="https://twitter.com/uflorez29" target="_blank">
+							<img src="img/icons8-twitter-circled.svg" alt="logo de twtter">
+						</a>
+						<a href="https://www.instagram.com/SumeSolucionesTec/" target="_blank">
+							<img src="img/icons8-instagram.svg" alt="logo de instagram">
+						</a>
+						<a href="https://api.whatsapp.com/send?phone=+573168320536" target="_blank">
+						<img src="img/icons8-whatsapp.svg" alt="icono de whatsapp">
+						</a>
+						<a href="https://github.com/uaflorez" target="_blank">
+						<img src="img/icons8-github.svg" alt="icono de github">
+						</a>
+					</div>
 				</div>
 			</div>
-			<p class="copyright">Todos los Derechos Reservados 2022 &copy;</p>
 		</section> <!-- fin contacto-->
-	</footer>
-
-
-</body>
+		<footer>
+			<div>
+			</div>
+			<p class="copyright">Todos los Derechos Reservados 2022 &copy;</p>
+		</footer>
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<script src="js/app.js" type="module"></script>
+	</body>
 </html>
