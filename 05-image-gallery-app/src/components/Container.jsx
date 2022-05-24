@@ -3,10 +3,8 @@ import Cards from './Cards';
 
 const Container = () => {
   return (
-    <div>
-      <Container maxWidth="sm">
+    <div className="container border my-3">
       <Cards />
-      </Container>
     </div>
   )
 }
